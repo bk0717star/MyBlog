@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lsj.blog.mapper.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="cn.lsj.blog.domain.Article">
+            <id property="articleId" column="article_id" jdbcType="BIGINT"/>
+            <result property="articleTitle" column="article_title" jdbcType="VARCHAR"/>
+            <result property="summary" column="summary" jdbcType="VARCHAR"/>
+            <result property="categoryId" column="category_id" jdbcType="INTEGER"/>
+            <result property="authorId" column="author_id" jdbcType="BIGINT"/>
+            <result property="articleBodyId" column="article_body_id" jdbcType="BIGINT"/>
+            <result property="createDate" column="create_date" jdbcType="BIGINT"/>
+            <result property="lastUpdated" column="last_updated" jdbcType="BIGINT"/>
+            <result property="commentCounts" column="comment_counts" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="likeCounts" column="like_counts" jdbcType="INTEGER"/>
+            <result property="viewCounts" column="view_counts" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        article_id,article_title,summary,
+        category_id,author_id,article_body_id,
+        create_date,last_updated,comment_counts,
+        status,like_counts,view_counts
+    </sql>
+</mapper>

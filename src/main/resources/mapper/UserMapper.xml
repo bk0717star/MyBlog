@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lsj.blog.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="cn.lsj.blog.domain.User">
+            <id property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="CHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+            <result property="admin" column="admin" jdbcType="CHAR"/>
+            <result property="createDate" column="create_date" jdbcType="BIGINT"/>
+            <result property="lastLogin" column="last_login" jdbcType="BIGINT"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="salt" column="salt" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,username,nickname,
+        gender,password,email,
+        phone_number,admin,create_date,
+        last_login,avatar,salt,
+        status
+    </sql>
+</mapper>
